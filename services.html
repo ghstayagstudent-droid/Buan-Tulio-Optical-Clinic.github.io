@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+<style>
+
+.service-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+    height: 100%;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.service-icon {
+    font-size: 50px;
+    color: #0d6efd;
+}
+/* Modal Images */
+.modal-content img {
+    max-height: 300px;
+    object-fit: contain;
+    width: 100%;
+}
+</style>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Logo" style="height:50px;">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#clinicNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="clinicNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
+                <li class="nav-item"><a class="nav-link active" href="gallery.html">GALLERY</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">CONTACTS</a></li>
+
+                 <li class="nav-item"><a class="nav-link text-danger fw-bold" href="promo.html">PROMO</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        </div>
+    </div>
+
+</nav>
+
+
+<section class="container py-5">
+    <<section class="container py-5">
+    <h1 class="text-center fw-bold mb-2">Our Services</h1>
+    <p class="text-center text-muted mb-5">We provide high-quality eye care solutions for all patients</p>
+
+    <div class="row g-4">
+
+        <!-- Eye Exam -->
+        <div class="col-md-4">
+            <div class="service-card text-center p-4" data-bs-toggle="modal" data-bs-target="#eyeExamModal" style="cursor:pointer;">
+                <i class="bi bi-eye service-icon"></i>
+                <h4 class="mt-3">Eye Examination</h4>
+                <p class="text-muted">FREE Comprehensive eye checkup for accurate diagnosis.</p>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4">
+            <div class="service-card text-center p-4" data-bs-toggle="modal" data-bs-target="#eyeglassModal" style="cursor:pointer;">
+                <i class="bi bi-eyeglasses service-icon"></i>
+                <h4 class="mt-3">Eyeglasses</h4>
+                <p class="text-muted">Stylish frames and lenses tailored to your vision.</p>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4">
+            <div class="service-card text-center p-4" data-bs-toggle="modal" data-bs-target="#contactLensModal" style="cursor:pointer;">
+                <i class="bi bi-droplet service-icon"></i>
+                <h4 class="mt-3">Contact Lenses</h4>
+                <p class="text-muted">Comfortable daily wear with proper fitting.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Eyeglasses Modal with Carousel -->
+<div class="modal fade" id="eyeglassModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h3 class="text-center mb-3">Eyeglasses Collection</h3>
+
+      
+      <div id="eyeglassCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          
+          <div class="carousel-item active text-center">
+            <img src="images/m1.jfif" class="d-block mx-auto img-fluid rounded mb-3" alt="Eyeglass 1" style="max-height:300px;">
+            <p class="text-muted">Soft pink transparent frame, lightweight and stylish—perfect for a cute everyday look.</p>
+          </div>
+
+         
+          <div class="carousel-item text-center">
+            <img src="images/m2.jfif" class="d-block mx-auto img-fluid rounded mb-3" alt="Eyeglass 2" style="max-height:300px;">
+            <p class="text-muted">Crystal-clear round frame, minimal and modern—great for a clean, sophisticated style.</p>
+          </div>
+
+          
+          <div class="carousel-item text-center">
+            <img src="images/m3.jfif" class="d-block mx-auto img-fluid rounded mb-3" alt="Eyeglass 3" style="max-height:300px;">
+            <p class="text-muted">Metal Classic black metal frame, timeless and versatile—suitable for daily use and formal settings.</p>
+          </div>
+
+          
+          <div class="carousel-item text-center">
+            <img src="images/m4.jfif" class="d-block mx-auto img-fluid rounded mb-3" alt="Eyeglass 4" style="max-height:300px;">
+            <p class="text-muted">Transparent gray square frame, sleek and contemporary—ideal for a smart casual appearance.</p>
+          </div>
+
+
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#eyeglassCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#eyeglassCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      
+      <div class="text-center mt-3">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

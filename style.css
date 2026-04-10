@@ -1,0 +1,157 @@
+
+/* 1. Reduce the overall thickness */
+.navbar {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    border-bottom: 1px solid #e0e0e0; /* Very thin line at the bottom */
+    background-color: white !important;
+}
+
+/* 2. Change Nav Links from Green to Blue */
+.nav-link {
+    color: #007bff !important; /* Professional Blue */
+    font-weight: 600;
+    font-size: 0.85rem; /* Slightly smaller to keep it slim */
+    margin: 0 12px;
+    text-transform: uppercase;
+}
+
+/* 3. Hover effect for links */
+.nav-link:hover {
+    color: #0056b3 !important; /* Darker blue when hovering */
+}
+
+/* 4. The PROMO!! Button (Now Blue) */
+.promo-btn {
+    border: 2px solid #007bff !important; 
+    color: #007bff !important;
+    padding: 3px 15px !important; /* Very slim padding */
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+/* 5. Promo Button Hover */
+.promo-btn:hover {
+    background-color: #007bff !important;
+    color: white !important;
+}
+
+/* 6. Keep the Logo height small so it doesn't stretch the bar */
+.navbar-brand img {
+    height: 55px !important; /* This controls the thickness of the whole bar */
+    width: auto;
+    display: block;
+}
+
+/* 7. Ensure the mobile menu looks right */
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 10px 0;
+    }
+    .promo-btn {
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
+
+/* Simple clean permit design */
+.permit-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+/* Image full view (no crop) */
+.permit-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: #f8f9fa;
+}
+
+/* Simple hover */
+.permit-box:hover {
+    transform: scale(1.03);
+}
+
+/* Owner Image */
+.owner-jfif {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%; /* makes it circle */
+    border: 5px solid #0d6efd;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Service Card Design */
+.service-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+    height: 100%;
+}
+
+/* Hover effect */
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Icon style */
+.service-icon {
+    font-size: 50px;
+    color: #0d6efd;
+}
+
+ /* Services Cards */
+.service-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+    height: 100%;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.service-icon {
+    font-size: 50px;
+    color: #0d6efd;
+}
+/* Modal Images */
+.modal-content img {
+    max-height: 300px;
+    object-fit: contain;
+    width: 100%;
+}
+
+html, body {
+  min-height: 100%;
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f5f9ff 50%,
+    #eef4ff 100%
+  ) !important;
+}
+
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f5f9ff 50%, #eef4ff 100%) !important;
+}
+
+/* Make sections/cards see-through so gradient shows */
+.card,
+.container,
+section {
+    background: transparent !important;
+}
