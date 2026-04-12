@@ -211,17 +211,18 @@
   const angle = 360 / total;
   let rotation = 0;
 
-  
+  // Position cards in a circle
   cards.forEach((card, i) => {
     card.style.transform = `rotateY(${i * angle}deg) translateZ(350px)`;
   });
 
- 
+  // Next button rotates carousel to the left
   document.getElementById("nextBtn").addEventListener("click", () => {
     rotation -= angle;
     carousel.style.transform = `rotateY(${rotation}deg)`;
   });
 
+  // Prev button rotates carousel to the right
   document.getElementById("prevBtn").addEventListener("click", () => {
     rotation += angle;
     carousel.style.transform = `rotateY(${rotation}deg)`;
