@@ -1,166 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-<style>
-/* Services Cards */
-.service-card {
-    background: #fff;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    transition: 0.3s;
-    height: 100%;
-}
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-.service-icon {
-    font-size: 50px;
-    color: #0d6efd;
-}
-/* Modal Images */
-.modal-content img {
-    max-height: 300px;
-    object-fit: contain;
-    width: 100%;
-}
-</style>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>SERVICES</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        /* Ensures the card looks clickable and maintains your design */
+        .service-item {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .service-item:hover {
+            transform: translateY(-10px);
+        }
+        /* Custom curved corners for Modals to match your UI */
+        .modal-content {
+            border-radius: 20px 80px 20px 20px !important;
+            border: none;
+            padding: 20px;
+        }
+        .modal-header {
+            border-bottom: none;
+        }
+        .modal-footer {
+            border-top: none;
+        }
+        .btn-teal {
+            background-color: #008080;
+            color: white;
+            border-radius: 10px;
+        }
+        .btn-teal:hover {
+            background-color: #006666;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="Logo" style="height:50px;">
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#clinicNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="clinicNav">
-            <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
-                <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
-                <li class="nav-item"><a class="nav-link active" href="gallery.html">GALLERY</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">CONTACTS</a></li>
-
-                 <li class="nav-item"><a class="nav-link text-danger fw-bold" href="promo.html">PROMO</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-        </div>
-    </div>
-
-</nav>
-
-
-<section class="container py-5">
-    <<section class="container py-5">
-    <h1 class="text-center fw-bold mb-2">Our Services</h1>
-    <p class="text-center text-muted mb-5">We provide high-quality eye care solutions for all patients</p>
-
-    <div class="row g-4">
-
-        <!-- Eye Exam -->
-        <div class="col-md-4">
-            <div class="service-card text-center p-4" data-bs-toggle="modal" data-bs-target="#eyeExamModal" style="cursor:pointer;">
-                <i class="bi bi-eye service-icon"></i>
-                <h4 class="mt-3">Eye Examination</h4>
-                <p class="text-muted">FREE Comprehensive eye checkup for accurate diagnosis.</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Logo" style="height:50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#clinicNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="clinicNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">CONTACTS</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger fw-bold" href="promo.html">PROMO</a></li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <!-- Eyeglasses -->
-        <div class="col-md-4">
-            <div class="service-card text-center p-4" data-bs-toggle="modal" data-bs-target="#eyeglassModal" style="cursor:pointer;">
-                <i class="bi bi-eyeglasses service-icon"></i>
-                <h4 class="mt-3">Eyeglasses</h4>
-                <p class="text-muted">Stylish frames and lenses tailored to your vision.</p>
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img">
+    </div>
+
+    <div id="services" class="services section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <h4>We provide <em>high-quality eye care solutions</em> for all patients</h4>
+                        <img src="assets/images/heading-line-dec.png" alt="">
+                        <p>If you need a check-up, new glasses, or contact lenses, Buan Tulio Optical Clinic is here to help you see clearly and comfortably.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item first-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-bs-toggle="modal" data-bs-target="#examModal">
+                        <div class="icon"><i class="fas fa-eye"></i></div>
+                        <h4>Eye Examination</h4>
+                        <p>Free comprehensive eye check-up for accurate diagnosis and vision care.</p>
+                        <div class="text-button">
+                            <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item second-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s" data-bs-toggle="modal" data-bs-target="#glassesModal">
+                        <div class="icon"><i class="fas fa-glasses"></i></div>
+                        <h4>Eyeglasses</h4>
+                        <p>Stylish frames and high-quality lenses customized for your vision.</p>
+                        <div class="text-button">
+                            <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item third-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" data-bs-toggle="modal" data-bs-target="#contactsModal">
+                        <div class="icon"><i class="fas fa-eye-dropper"></i></div>
+                        <h4>Contact Lenses</h4>
+                        <p>Comfortable and safe contact lenses fitted for your daily lifestyle.</p>
+                        <div class="text-button">
+                            <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item fourth-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s" data-bs-toggle="modal" data-bs-target="#upgradesModal">
+                        <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                        <h4>Lens Upgrades</h4>
+                        <p>Anti-radiation, blue light protection, and transition lenses.</p>
+                        <div class="text-button">
+                            <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <!-- Contact Lens -->
-        <div class="col-md-4">
-            <div class="service-card text-center p-4" data-bs-toggle="modal" data-bs-target="#contactLensModal" style="cursor:pointer;">
-                <i class="bi bi-droplet service-icon"></i>
-                <h4 class="mt-3">Contact Lenses</h4>
-                <p class="text-muted">Comfortable daily wear with proper fitting.</p>
+    <div class="modal fade" id="examModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow">
+                <div class="modal-header">
+                    <h5 class="fw-bold">Clinical Eye Examination</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Our comprehensive check-up includes more than just a prescription update. We prioritize your ocular health through:</p>
+                    <ul>
+                        <li><strong>Visual Acuity:</strong> Standardized clarity testing.</li>
+                        <li><strong>Refraction Assessment:</strong> Precise measurement for corrective lenses.</li>
+                        <li><strong>Ocular Health Screening:</strong> Detection of glaucoma and cataracts.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-teal px-4" data-bs-dismiss="modal">Got it</button>
+                </div>
             </div>
         </div>
-
     </div>
-</section>
 
-<!-- Eyeglasses Modal with Carousel -->
-<div class="modal fade" id="eyeglassModal" tabindex="-1">
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content p-4">
-      <h3 class="text-center mb-3">Eyeglasses Collection</h3>
-
-      <!-- Bootstrap Carousel -->
-      <div id="eyeglassCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-
-          <!-- Slide 1 -->
-          <div class="carousel-item active text-center">
-            <img src="images/m1.jfif" class="d-block mx-auto img-fluid rounded mb-3" alt="Eyeglass 1" style="max-height:300px;">
-            <p class="text-muted">Soft pink transparent frame, lightweight and stylish—perfect for a cute everyday look.</p>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="carousel-item text-center">
-            <img src="images/m2.jfif" class="d-block mx-auto img-fluid rounded mb-3" alt="Eyeglass 2" style="max-height:300px;">
-            <p class="text-muted">Crystal-clear round frame, minimal and modern—great for a clean, sophisticated style.</p>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="carousel-item text-center">
-            <img src="images/m3.jfif" class="d-block mx-auto img-fluid rounded mb-3" alt="Eyeglass 3" style="max-height:300px;">
-            <p class="text-muted">Metal Classic black metal frame, timeless and versatile—suitable for daily use and formal settings.</p>
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="carousel-item text-center">
-            <img src="images/m4.jfif" class="d-block mx-auto img-fluid rounded mb-3" alt="Eyeglass 4" style="max-height:300px;">
-            <p class="text-muted">Transparent gray square frame, sleek and contemporary—ideal for a smart casual appearance.</p>
-          </div>
-
-
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#eyeglassCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#eyeglassCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-      </div>
-
-      <!-- Close Button -->
-      <div class="text-center mt-3">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-      </div>
-
+    <div class="modal fade" id="glassesModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow">
+                <div class="modal-header">
+                    <h5 class="fw-bold">Premium Eyewear</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>We offer a curated collection of stylish frames and precision lenses. Whether you need lightweight comfort for work or a bold fashion statement, we have the perfect fit.</p>
+                    <p class="text-muted">Brands available for all budgets.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="gallery.html" class="btn btn-teal px-4">View Gallery</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="modal fade" id="contactsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow">
+                <div class="modal-header">
+                    <h5 class="fw-bold">Contact Lens Specialty</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>We feature <strong>Sofclear Colours with BioMoist</strong> technology—designed for superior hydration and all-day comfort.</p>
+                    <h6 class="fw-bold mt-3">Clinical Options:</h6>
+                    <ul>
+                        <li><strong>Graded Spherical:</strong> Clear vision for myopia/hyperopia.</li>
+                        <li><strong>Cosmetic Tones:</strong> Pure Hazel, Sapphire Blue, Midnight Grey, and more.</li>
+                        <li><strong>Toric/Multifocal:</strong> Specialized fits for astigmatism and presbyopia.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-teal px-4" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="upgradesModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow">
+                <div class="modal-header">
+                    <h5 class="fw-bold">Lens Enhancements</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Upgrade your vision with advanced coatings and technologies:</p>
+                    <ul>
+                        <li><strong>Blue Light Protection:</strong> Essential for digital device users.</li>
+                        <li><strong>Photochromic (Transitions):</strong> Lenses that darken in sunlight.</li>
+                        <li><strong>Anti-Radiation:</strong> Protection against electromagnetic interference.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-teal px-4" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/custom.js"></script>
+<footer class="footer-section mt-5 py-4"> <div class="container">
+        <div class="row gy-3"> <div class="col-lg-3 col-md-6">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Buan Tulio Logo" style="height: 40px;" class="mb-2">
+                    <p class="text-muted small">
+                        Comprehensive eye exams and high-quality eyewear with trusted professional care.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h6 class="fw-bold mb-3">Quick Links</h6>
+                <ul class="list-unstyled footer-links small">
+                    <li class="mb-1"><a href="about.html" class="text-decoration-none text-muted">About Us</a></li>
+                    <li class="mb-1"><a href="services.html" class="text-decoration-none text-muted">Our Services</a></li>
+                    <li class="mb-1"><a href="gallery.html" class="text-decoration-none text-muted">Gallery</a></li>
+                    <li><a href="promo.html" class="text-decoration-none text-muted">Special Promos</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h6 class="fw-bold mb-3">Our Services</h6>
+                <ul class="list-unstyled footer-links small text-muted">
+                    <li class="mb-1">Eye Examination</li>
+                    <li class="mb-1">Eyeglasses</li>
+                    <li class="mb-1">Contact Lenses</li>
+                    <li>Lens Upgrades</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <h6 class="fw-bold mb-3">Visit Our Clinic</h6>
+                <ul class="list-unstyled footer-contact small text-muted">
+                    <li class="mb-1"><i class="fas fa-map-marker-alt text-teal me-2"></i> Buan-Tulio Optical Clinic (Arayat, Pampanga)</li>
+                    <li class="mb-1"><i class="fas fa-phone-alt text-teal me-2"></i> 09758831391</li>
+                    <li class="mb-1"><i class="fas fa-envelope text-teal me-2"></i> info@buan-tulio-optical-clinic.site</li>
+                    <li><i class="fas fa-clock text-teal me-2"></i> Mon - Sat: 9:00 AM - 6:00 PM</li>
+                </ul>
+                <a href="#appointment" class="btn btn-teal-outline btn-sm mt-2">Book Appointment</a>
+            </div>
+
+        </div>
+
+        <hr class="my-3 border-light">
+
+        <div class="row align-items-center small">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="mb-0 text-muted">&copy; 2026 Buan Tulio Optical Clinic. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <p class="mb-0 text-muted">See Clearly. Live Better.</p>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
