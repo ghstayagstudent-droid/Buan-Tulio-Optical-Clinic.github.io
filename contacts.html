@@ -3,48 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buan Tulio Optical Clinic</title>
-
+<title>Contacts | Buan Tulio Optical Clinic</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-
 <div style="position:fixed; bottom:20px; right:20px; z-index:9999; text-align:center;">
-
-        <a href="https://www.facebook.com/profile.php?id=100066470893947" target="_blank"
-       style="background:#1877f2; width:55px; height:55px; display:flex; align-items:center; justify-content:center; border-radius:50%; margin-bottom:10px;">
+    <a href="https://www.facebook.com/profile.php?id=100066470893947" target="_blank" style="background:#1877f2; width:55px; height:55px; display:flex; align-items:center; justify-content:center; border-radius:50%; margin-bottom:10px;">
         <i class="bi bi-facebook text-white fs-4"></i>
     </a>
-
-    
-    <a href="tel:+9758831391"
-       onclick="document.getElementById('phonenumber').style.display='block';"
-       style="background:#25D366; width:55px; height:55px; display:flex; align-items:center; justify-content:center; border-radius:50%;">
+    <a href="tel:+9758831391" onclick="document.getElementById('phonenumber').style.display='block';" style="background:#25D366; width:55px; height:55px; display:flex; align-items:center; justify-content:center; border-radius:50%;">
         <i class="bi bi-telephone-fill text-white"></i>
     </a>
-
     <div id="phonenumber" style="display:none; margin-top:8px; background:white; padding:5px 8px; border-radius:5px; font-size:12px;">
-        📞 09758831391
+        09758831391
     </div>
-
 </div>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
     <div class="container">
-
         <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="Logo" style="height:50px;">
+            <img src="images/LOGO2.png" alt="Logo" style="height:50px;">
         </a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#clinicNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="clinicNav">
             <ul class="navbar-nav ms-auto align-items-center">
                 <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
@@ -54,130 +40,85 @@
                 <li class="nav-item"><a class="nav-link text-danger fw-bold" href="promo.html">PROMO</a></li>
             </ul>
         </div>
-
     </div>
 </nav>
 
-
 <div class="container py-5">
-
     <div class="text-center mb-5">
         <h1 class="fw-bold">Contact Us</h1>
-        <p class="text-muted">We are here to help you with your eye care needs</p>
+        <p class="text-muted">We are here to help you with your eye care needs.</p>
     </div>
 
     <div class="row g-4">
-
-        
         <div class="col-lg-6">
             <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
-
                 <div class="ratio ratio-16x9">
-                  <iframe 
-                          src="https://www.google.com/maps?q=Buan-Tulio+Optical+Clinic+Arayat+Pampanga&output=embed"
-                          style="border:0;" 
-                          allowfullscreen  
-                          loading="lazy">
-                      </iframe>
+                    <iframe src="https://www.google.com/maps?q=Buan-Tulio+Optical+Clinic+Arayat+Pampanga&output=embed" style="border:0;" allowfullscreen loading="lazy"></iframe>
                 </div>
-
                 <div class="p-3">
-                    <small class="text-muted">
-                        📍 Buan-Tulio Optical Clinic (Arayat, Pampanga)
-                    </small>
+                    <small class="text-muted">Buan-Tulio Optical Clinic, Arayat, Pampanga</small>
                 </div>
-
             </div>
         </div>
 
-        
         <div class="col-lg-6">
             <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 h-100">
-
                 <h4 class="fw-bold mb-4">Send a Message</h4>
-
-                <form>
-                    <div class="mb-3">
-                        <input type="text" class="form-control rounded-3" placeholder="Full Name">
-                    </div>
-
-                    <div class="mb-3">
-                        <input type="email" class="form-control rounded-3" placeholder="Email Address">
-                    </div>
-
-                    <div class="mb-3">
-                        <input type="tel" class="form-control rounded-3" placeholder="Mobile Number">
-                    </div>
-
-                    <div class="mb-3">
-                        <textarea class="form-control rounded-3" rows="4" placeholder="Message"></textarea>
-                    </div>
-
-                    <button class="btn btn-dark w-100 rounded-3">
-                        Send Message
-                    </button>
+                <form class="js-prototype-message">
+                    <div class="mb-3"><input type="text" class="form-control rounded-3" placeholder="Full Name"></div>
+                    <div class="mb-3"><input type="email" class="form-control rounded-3" placeholder="Email Address"></div>
+                    <div class="mb-3"><input type="tel" class="form-control rounded-3" placeholder="Mobile Number"></div>
+                    <div class="mb-3"><textarea class="form-control rounded-3" rows="4" placeholder="Message"></textarea></div>
+                    <button class="btn btn-dark w-100 rounded-3">Send Message</button>
                 </form>
-
             </div>
         </div>
-
     </div>
 </div>
 
-<!-- BOOTSTRAP JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<footer class="footer-section mt-0 py-0"> <div class="container">
-        <div class="row gy-3"> <div class="col-lg-3 col-md-6">
-                <div class="footer-brand">
-                    <img src="images/logo.png" alt="Buan Tulio Logo" style="height: 40px;" class="mb-2">
-                    <p class="text-muted small">
-                        Comprehensive eye exams and high-quality eyewear with trusted professional care.
-                    </p>
-                </div>
+<script>
+document.querySelectorAll('.js-prototype-message').forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        window.alert('This is only a prototype. Sending a message is not currently working yet.');
+    });
+});
+</script>
+
+<footer class="clinic-footer">
+    <div class="container">
+        <div class="clinic-footer__inner">
+            <div class="clinic-footer__brand">
+                <img src="images/LOGO2.png" alt="Buan Tulio Optical Clinic logo">
+                <p>Trusted eye care, quality eyewear, and dependable service for every patient visit.</p>
             </div>
 
-            <div class="col-lg-2 col-md-6">
-                <h6 class="fw-bold mb-3">Quick Links</h6>
-                <ul class="list-unstyled footer-links small">
-                    <li class="mb-1"><a href="about.html" class="text-decoration-none text-muted">About Us</a></li>
-                    <li class="mb-1"><a href="services.html" class="text-decoration-none text-muted">Our Services</a></li>
-                    <li class="mb-1"><a href="gallery.html" class="text-decoration-none text-muted">Gallery</a></li>
-                    <li><a href="promo.html" class="text-decoration-none text-muted">Special Promos</a></li>
-                </ul>
+            <div class="clinic-footer__group">
+                <span class="clinic-footer__title">Pages</span>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contacts.html">Contacts</a>
             </div>
 
-            <div class="col-lg-3 col-md-6">
-                <h6 class="fw-bold mb-3">Our Services</h6>
-                <ul class="list-unstyled footer-links small text-muted">
-                    <li class="mb-1">Eye Examination</li>
-                    <li class="mb-1">Eyeglasses</li>
-                    <li class="mb-1">Contact Lenses</li>
-                    <li>Lens Upgrades</li>
-                </ul>
+            <div class="clinic-footer__group">
+                <span class="clinic-footer__title">Visit</span>
+                <p>Buan-Tulio Optical Clinic<br>Arayat, Pampanga</p>
+                <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
             </div>
 
-            <div class="col-lg-4 col-md-6">
-                <h6 class="fw-bold mb-3">Visit Our Clinic</h6>
-                <ul class="list-unstyled footer-contact small text-muted">
-                    <li class="mb-1"><i class="fas fa-map-marker-alt text-teal me-2"></i> Buan-Tulio Optical Clinic (Arayat, Pampanga)</li>
-                    <li class="mb-1"><i class="fas fa-phone-alt text-teal me-2"></i> 09758831391</li>
-                    <li class="mb-1"><i class="fas fa-envelope text-teal me-2"></i> info@buan-tulio-optical-clinic.site</li>
-                    <li><i class="fas fa-clock text-teal me-2"></i> Mon - Sat: 9:00 AM - 6:00 PM</li>
-                </ul>
-                <a href="#appointment" class="btn btn-teal-outline btn-sm mt-2">Book Appointment</a>
+            <div class="clinic-footer__group">
+                <span class="clinic-footer__title">Contact</span>
+                <a href="tel:09758831391">09758831391</a>
+                <a href="mailto:info@buan-tulio-optical-clinic.site">info@buan-tulio-optical-clinic.site</a>
+                <a href="index.html#appointment" class="clinic-footer__cta">Book Appointment</a>
             </div>
-
         </div>
 
-        <hr class="my-3 border-light">
-
-        <div class="row align-items-center small">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="mb-0 text-muted">&copy; 2026 Buan Tulio Optical Clinic. All rights reserved.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <p class="mb-0 text-muted">See Clearly. Live Better.</p>
-            </div>
+        <div class="clinic-footer__bottom">
+            <p class="mb-0">&copy; 2026 Buan Tulio Optical Clinic. All rights reserved.</p>
+            <p class="mb-0">See Clearly. Live Better.</p>
         </div>
     </div>
 </footer>
