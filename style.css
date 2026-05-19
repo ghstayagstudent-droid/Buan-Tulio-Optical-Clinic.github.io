@@ -2850,3 +2850,717 @@ section,
         min-height: 360px;
     }
 }
+
+/* Final UI refresh */
+:root {
+    --clinic-ink: #10243f;
+    --clinic-muted: #59697a;
+    --clinic-blue: #0b6fbf;
+    --clinic-teal: #099f9b;
+    --clinic-green: #2f8f5b;
+    --clinic-gold: #d99a2b;
+    --clinic-line: rgba(16, 36, 63, 0.12);
+    --clinic-card: rgba(255, 255, 255, 0.88);
+    --clinic-shadow: 0 18px 45px rgba(16, 36, 63, 0.12);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--clinic-ink);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.65;
+    background:
+        linear-gradient(180deg, rgba(246, 251, 255, 0.92), rgba(237, 247, 244, 0.95)),
+        url("images/lab1.png") center top / cover fixed !important;
+}
+
+body::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    filter: none;
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.42)),
+        radial-gradient(circle at 12% 18%, rgba(9, 159, 155, 0.18), transparent 28%),
+        radial-gradient(circle at 88% 10%, rgba(217, 154, 43, 0.16), transparent 24%);
+    z-index: -2;
+}
+
+body::after {
+    display: none;
+}
+
+* {
+    transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+}
+
+.navbar {
+    padding: 10px 0 !important;
+    border-bottom: 1px solid rgba(16, 36, 63, 0.08);
+    background: rgba(255, 255, 255, 0.90) !important;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 12px 34px rgba(16, 36, 63, 0.08) !important;
+}
+
+.navbar-brand img {
+    height: 58px !important;
+    max-width: 180px;
+    object-fit: contain;
+}
+
+.nav-link {
+    position: relative;
+    color: var(--clinic-ink) !important;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    margin: 0 6px;
+    padding: 9px 11px !important;
+    border-radius: 999px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff !important;
+    background: linear-gradient(135deg, var(--clinic-blue), var(--clinic-teal));
+}
+
+.nav-link.text-danger {
+    color: #b35f00 !important;
+}
+
+.nav-link.text-danger:hover,
+.nav-link.text-danger.active {
+    color: #fff !important;
+    background: linear-gradient(135deg, #e89b26, #d45b39);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-display,
+.main-title {
+    color: var(--clinic-ink);
+    letter-spacing: 0;
+    -webkit-text-fill-color: currentColor;
+    background: none;
+}
+
+h1,
+.main-title,
+.heading-display {
+    font-weight: 850;
+    line-height: 1.05;
+}
+
+p,
+li,
+.text-body,
+.text-muted {
+    color: var(--clinic-muted) !important;
+}
+
+.badge,
+.text-label,
+.appointment-kicker,
+.promo-showcase__kicker,
+.services-hero__kicker,
+.services-summary__label,
+.service-detail-card__eyebrow {
+    letter-spacing: 0.08em;
+}
+
+.btn,
+.btn-primary,
+.btn-highlight,
+.appointment-form__submit,
+.form-submit {
+    border: 0 !important;
+    border-radius: 999px !important;
+    background: linear-gradient(135deg, var(--clinic-blue), var(--clinic-teal)) !important;
+    color: #fff !important;
+    font-weight: 800;
+    box-shadow: 0 14px 28px rgba(11, 111, 191, 0.22);
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-highlight:hover,
+.appointment-form__submit:hover,
+.form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 34px rgba(9, 159, 155, 0.25);
+}
+
+.btn-outline-primary,
+.btn-secondary,
+.btn-dark {
+    background: rgba(255, 255, 255, 0.86) !important;
+    color: var(--clinic-blue) !important;
+    border: 1px solid rgba(11, 111, 191, 0.24) !important;
+    box-shadow: none;
+}
+
+img:hover {
+    transform: none;
+    filter: none;
+}
+
+.hero-section {
+    position: relative;
+    min-height: calc(100vh - 78px);
+    display: flex;
+    align-items: center;
+    padding: 76px 0 58px;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(247, 252, 255, 0.96) 0%, rgba(247, 252, 255, 0.82) 48%, rgba(247, 252, 255, 0.34) 100%),
+        url("images/f1.jfif") center / cover no-repeat !important;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 90px;
+    background: linear-gradient(180deg, transparent, rgba(246, 251, 255, 0.94));
+    pointer-events: none;
+}
+
+.hero-section .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.64);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: var(--clinic-shadow);
+    backdrop-filter: blur(14px);
+}
+
+.main-title {
+    max-width: 620px;
+    font-size: clamp(2.7rem, 6vw, 5.8rem);
+}
+
+.lead {
+    max-width: 620px;
+    font-size: clamp(1rem, 1.7vw, 1.25rem);
+}
+
+.professional-img {
+    width: min(100%, 520px);
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border: 12px solid rgba(255, 255, 255, 0.72);
+    border-radius: 34px;
+    box-shadow: 0 28px 60px rgba(16, 36, 63, 0.25);
+}
+
+.floating-circle {
+    display: none;
+}
+
+.appointment-strip,
+.home-highlights,
+.services-overview,
+.promo-showcase,
+.collections,
+section.container,
+.container.py-5 {
+    padding-top: 54px !important;
+    padding-bottom: 54px !important;
+}
+
+.appointment-panel,
+.home-highlight-card,
+.service-detail-card,
+.promo-poster-card,
+.permit-box,
+.card,
+.collection-item {
+    border: 1px solid var(--clinic-line) !important;
+    border-radius: 22px !important;
+    background: var(--clinic-card) !important;
+    box-shadow: var(--clinic-shadow);
+    backdrop-filter: blur(16px);
+}
+
+.home-highlight-card,
+.service-detail-card,
+.card {
+    overflow: hidden;
+}
+
+.home-highlight-card::before,
+.service-detail-card::before,
+.card::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: linear-gradient(90deg, var(--clinic-blue), var(--clinic-teal), var(--clinic-gold));
+}
+
+.card:hover,
+.permit-box:hover,
+.service-card:hover,
+.home-highlight-card:hover,
+.service-detail-card:hover,
+.promo-poster-card:hover,
+.collection-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 54px rgba(16, 36, 63, 0.16);
+}
+
+.appointment-panel {
+    grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.4fr);
+    gap: 26px;
+    padding: 28px;
+}
+
+.appointment-panel__intro {
+    padding: 10px;
+}
+
+.appointment-form .form-control,
+.appointment-form .form-select,
+.form-control,
+.form-select,
+.form-input,
+.form-textarea {
+    min-height: 48px;
+    border: 1px solid rgba(16, 36, 63, 0.14) !important;
+    border-radius: 14px !important;
+    background-color: rgba(255, 255, 255, 0.92) !important;
+    color: var(--clinic-ink) !important;
+    box-shadow: none !important;
+}
+
+.appointment-form .form-control:focus,
+.appointment-form .form-select:focus,
+.form-control:focus,
+.form-select:focus,
+.form-input:focus,
+.form-textarea:focus {
+    border-color: rgba(9, 159, 155, 0.70) !important;
+    box-shadow: 0 0 0 4px rgba(9, 159, 155, 0.12) !important;
+}
+
+.home-highlight-card {
+    min-height: 100%;
+    padding: 24px;
+}
+
+.home-highlight-card h3,
+.service-detail-card__body h2,
+.promo-copy h3 {
+    font-size: 1.25rem;
+}
+
+.services-hero {
+    position: relative;
+    width: 100% !important;
+    margin: 0 auto 32px !important;
+    padding: 86px 0 70px;
+    border-radius: 0 0 34px 34px !important;
+    box-shadow: none !important;
+    background:
+        linear-gradient(90deg, rgba(246, 251, 255, 0.82), rgba(246, 251, 255, 0.36)),
+        url("images/lab2.png") center / cover no-repeat !important;
+}
+
+.services-hero::before,
+.hero::before {
+    display: none !important;
+}
+
+.services-hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    padding: 30px;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: var(--clinic-shadow);
+    backdrop-filter: blur(16px);
+}
+
+.services-hero__content h1,
+.services-hero__text,
+.services-hero__kicker {
+    color: var(--clinic-ink) !important;
+}
+
+.service-detail-card {
+    grid-template-columns: 190px minmax(0, 1fr);
+    padding: 20px;
+}
+
+.service-detail-card__media {
+    border-radius: 18px;
+}
+
+.services-summary {
+    border-color: var(--clinic-line);
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: var(--clinic-shadow);
+}
+
+.owner-jfif {
+    border-color: #fff;
+    box-shadow: 0 18px 42px rgba(16, 36, 63, 0.22);
+}
+
+.permit-box img {
+    border-radius: 16px;
+}
+
+.hero {
+    min-height: calc(100vh - 80px);
+    width: 100% !important;
+    margin: 0 auto 32px !important;
+    padding: 78px min(6vw, 74px);
+    border-radius: 0 0 34px 34px !important;
+    box-shadow: none !important;
+    background:
+        linear-gradient(110deg, rgba(246, 251, 255, 0.88) 0%, rgba(246, 251, 255, 0.66) 42%, rgba(9, 159, 155, 0.25) 100%),
+        url("images/f1.jfif") center / cover no-repeat !important;
+}
+
+.hero .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 28px;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: var(--clinic-shadow);
+    backdrop-filter: blur(16px);
+}
+
+.hero-title,
+.hero-description,
+.hero-tagline {
+    color: var(--clinic-ink) !important;
+}
+
+.hero .hero-tagline,
+.hero .hero-title,
+.hero .hero-description,
+.hero .hero-actions,
+.hero .hero-image,
+.hero .hero-image-overlay {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.hero-title em {
+    color: #a7f3d0;
+}
+
+.hero-actions .btn-primary {
+    min-width: 176px;
+    padding: 16px 22px;
+    font-size: 0.8rem;
+    line-height: 1.25;
+}
+
+.hero-image {
+    border-radius: 32px;
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
+}
+
+.collection-image {
+    border-radius: 22px;
+}
+
+.collection-overlay {
+    background: linear-gradient(180deg, transparent, rgba(16, 36, 63, 0.82));
+}
+
+.collection-name,
+.collection-count {
+    color: #fff !important;
+}
+
+.promo-showcase__header {
+    padding: 24px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: var(--clinic-shadow);
+}
+
+.promo-poster-frame {
+    background:
+        linear-gradient(135deg, rgba(11, 111, 191, 0.10), rgba(9, 159, 155, 0.12)),
+        rgba(255, 255, 255, 0.70);
+}
+
+.clinic-footer {
+    margin-top: 42px;
+    background:
+        linear-gradient(135deg, rgba(16, 36, 63, 0.98), rgba(8, 81, 105, 0.98)),
+        url("images/f1.jfif") center / cover no-repeat;
+}
+
+.clinic-footer__brand p,
+.clinic-footer__group p,
+.clinic-footer__group a,
+.clinic-footer__bottom p {
+    color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.clinic-footer__title {
+    color: #fff;
+}
+
+.clinic-footer__cta {
+    display: inline-flex;
+    justify-content: center;
+    width: fit-content;
+    color: #fff !important;
+    background: linear-gradient(135deg, var(--clinic-green), var(--clinic-teal));
+}
+
+.clinic-footer,
+footer.clinic-footer {
+    margin-top: 48px !important;
+    padding: 34px 0 18px !important;
+    border-top: 0 !important;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(16, 36, 63, 0.96), rgba(8, 81, 105, 0.96)),
+        url("images/f1.jfif") center / cover no-repeat !important;
+}
+
+.clinic-footer .container {
+    max-width: 1180px;
+    padding: 0 24px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.clinic-footer__inner {
+    gap: 34px;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.clinic-footer__brand img {
+    height: 50px !important;
+    padding: 6px 10px;
+    margin-bottom: 14px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.92);
+}
+
+.clinic-footer__title {
+    margin-bottom: 12px;
+    color: #ffffff !important;
+    font-size: 0.8rem;
+}
+
+.clinic-footer__brand p,
+.clinic-footer__group p,
+.clinic-footer__group a,
+.clinic-footer__bottom p {
+    color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.clinic-footer__group {
+    gap: 9px;
+}
+
+.clinic-footer__group a {
+    text-decoration: none;
+}
+
+.clinic-footer__group a:hover {
+    color: #ffffff !important;
+}
+
+.clinic-footer__cta {
+    margin-top: 4px;
+    padding: 10px 18px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+.clinic-footer__bottom {
+    margin-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+.services-overview .row {
+    --bs-gutter-x: 18px;
+    --bs-gutter-y: 18px;
+}
+
+.services-overview .service-detail-card {
+    display: flex !important;
+    flex-direction: column;
+    min-height: 100%;
+    gap: 14px;
+    padding: 14px !important;
+}
+
+.services-overview .service-detail-card__media {
+    width: 100%;
+    height: 180px !important;
+    border-radius: 16px;
+    order: 0;
+}
+
+.services-overview .service-detail-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services-overview .service-detail-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.services-overview .service-detail-card__eyebrow {
+    margin-bottom: 4px;
+}
+
+.services-overview .service-detail-card__body h2 {
+    margin-bottom: 6px;
+    font-size: 1.18rem;
+}
+
+.services-overview .service-detail-card__body p {
+    margin-bottom: 8px;
+    line-height: 1.55;
+}
+
+.services-overview .service-detail-card__body ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px 14px;
+    margin: 4px 0 0;
+    padding-left: 18px;
+}
+
+.services-overview .service-detail-card__body li {
+    line-height: 1.45;
+}
+
+@media (max-width: 991px) {
+    .services-overview .service-detail-card__body ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .services-overview .service-detail-card__media {
+        height: 160px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        align-items: stretch !important;
+        gap: 6px;
+        padding: 14px 0 6px;
+    }
+
+    .nav-link {
+        margin: 0;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 58px 0 42px;
+        background:
+            linear-gradient(180deg, rgba(247, 252, 255, 0.96), rgba(247, 252, 255, 0.72)),
+            url("images/f1.jfif") center / cover no-repeat !important;
+    }
+
+    .hero-content {
+        padding: 24px;
+    }
+
+    .professional-img {
+        aspect-ratio: 16 / 11;
+        border-radius: 26px;
+    }
+
+    .service-detail-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        background-attachment: scroll !important;
+    }
+
+    .navbar-brand img {
+        height: 50px !important;
+    }
+
+    .main-title {
+        font-size: clamp(2.35rem, 15vw, 3.45rem);
+    }
+
+    .hero-content {
+        border-radius: 22px;
+        padding: 20px;
+    }
+
+    .appointment-strip,
+    .home-highlights,
+    .services-overview,
+    .promo-showcase,
+    .collections,
+    section.container,
+    .container.py-5 {
+        padding-top: 36px !important;
+        padding-bottom: 36px !important;
+    }
+
+    .appointment-panel,
+    .service-detail-card,
+    .promo-poster-card,
+    .card {
+        border-radius: 18px !important;
+    }
+
+    .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        padding: 54px 20px;
+    }
+
+    .hero-actions,
+    .services-hero__actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-actions a,
+    .services-hero__actions a,
+    .d-flex .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .promo-poster-frame {
+        padding: 10px;
+    }
+}
